@@ -34,7 +34,6 @@ requirements:
   - pyparsing
   - python >=3.6
   - python-louvain
-  - torch
     # - h5py
     # - numba
     # - plyfile
@@ -47,6 +46,7 @@ requirements:
 
 test:
   imports:
+    - torch
     - torch_geometric
 
 about:
