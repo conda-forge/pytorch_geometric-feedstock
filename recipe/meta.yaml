@@ -40,13 +40,13 @@ requirements:
     - pytorch_scatter
     - pytorch_sparse ==0.6.3
     - pytorch_spline_conv
-    - pyparsing
-    - jinja2
-    - tqdm
+    # - pyparsing
+    # - jinja2
+    # - tqdm
 
 test:
   imports:
-    - torch_geometric
+    # - torch_geometric
 
 about:
   home: https://github.com/rusty1s/pytorch_geometric
