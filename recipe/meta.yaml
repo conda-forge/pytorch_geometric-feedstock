@@ -46,7 +46,7 @@ requirements:
 
 test:
   imports:
-    # - torch_geometric
+    - torch_geometric
 
 about:
   home: https://github.com/rusty1s/pytorch_geometric
