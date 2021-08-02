@@ -21,28 +21,28 @@ requirements:
     - python
     - setuptools
   run:
-    - python
-    - googledrivedownloader
-    - h5py
-    - networkx
-    - numba
     - numpy
     - tqdm
-    - pandas
-    - plyfile
-    - rdflib
-    - requests
-    - scikit-learn
     - scipy
-    - ase
-    - pytorch
-    - pytorch_cluster
-    - pytorch_scatter
-    - pytorch_sparse ==0.6.3
-    - pytorch_spline_conv
-    # - pyparsing
-    # - jinja2
-    # - tqdm
+    - networkx
+    - scikit-learn
+    - requests
+    - pandas
+    - rdflib
+    - googledrivedownloader
+    - jinja2
+    - pyparsing
+    - python >=3.6
+    - python-louvain
+    # - h5py
+    # - numba
+    # - plyfile
+    # - ase
+    # - pytorch
+    # - pytorch_cluster
+    # - pytorch_scatter
+    # - pytorch_sparse ==0.6.3
+    # - pytorch_spline_conv
 
 test:
   imports:
