@@ -46,7 +46,6 @@ requirements:
 
 test:
   imports:
-    - torch
     - torch_geometric
 
 about:
