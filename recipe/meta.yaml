@@ -40,6 +40,9 @@ requirements:
     - pytorch_scatter
     - pytorch_sparse ==0.6.3
     - pytorch_spline_conv
+    - pyparsing
+    - jinja2
+    - tqdm
 
 test:
   imports:
