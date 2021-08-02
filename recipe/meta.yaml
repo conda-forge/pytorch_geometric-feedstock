@@ -1,5 +1,5 @@
 {% set name = "torch_geometric" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: py{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 158c153bd12408dd1ac0a543fc54bc7a7bd3ee6dcff83fd50031622aa4f9259d
+  sha256: a57b115cb3891c81d16960380e0bc4d842da2c96bea5ca019d6d139e6f026b31
 
 build:
   number: 0
@@ -57,3 +57,5 @@ extra:
     - rluria14
     - oblute
     - ndmaxar
+    - mxr-conda
+
