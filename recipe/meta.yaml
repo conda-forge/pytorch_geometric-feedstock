@@ -35,6 +35,7 @@ requirements:
   - scipy
   - tqdm
   - pytorch
+  - pytorch_sparse
     # - h5py
     # - numba
     # - plyfile
