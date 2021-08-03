@@ -36,15 +36,6 @@ requirements:
   - tqdm
   - pytorch
   - pytorch_sparse
-    # - h5py
-    # - numba
-    # - plyfile
-    # - ase
-    # - pytorch
-    # - pytorch_cluster
-    # - pytorch_scatter
-    # - pytorch_sparse ==0.6.3
-    # - pytorch_spline_conv
 
 test:
   imports:
