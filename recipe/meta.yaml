@@ -21,19 +21,19 @@ requirements:
     - python
     - setuptools
   run:
-  - numpy
-  - tqdm
-  - scipy
-  - networkx
-  - scikit-learn
-  - requests
-  - pandas
-  - rdflib
   - googledrivedownloader
   - jinja2
+  - networkx
+  - numpy
+  - pandas
   - pyparsing
   - python >=3.6
   - python-louvain
+  - requests
+  - rdflib
+  - scikit-learn
+  - scipy
+  - tqdm
     # - h5py
     # - numba
     # - plyfile
