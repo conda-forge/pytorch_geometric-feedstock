@@ -1,5 +1,5 @@
 {% set name = "torch_geometric" %}
-{% set version = "1.7.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: py{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a57b115cb3891c81d16960380e0bc4d842da2c96bea5ca019d6d139e6f026b31
+  sha256: ccd03645467c28c2e58fce7512c04c53df19d2d01b73e4731a16283f06f7beef
 
 build:
   number: 0
@@ -21,21 +21,21 @@ requirements:
     - python
     - setuptools
   run:
-  - googledrivedownloader
-  - jinja2
-  - networkx
-  - numpy
-  - pandas
-  - pyparsing
-  - python >=3.6
-  - python-louvain
-  - requests
-  - rdflib
-  - scikit-learn
-  - scipy
-  - tqdm
-  - pytorch
-  - pytorch_sparse
+    - googledrivedownloader
+    - jinja2
+    - networkx
+    - numpy
+    - pandas
+    - pyparsing
+    - python >=3.6
+    - python-louvain
+    - requests
+    - rdflib
+    - scikit-learn
+    - scipy
+    - tqdm
+    - pytorch
+    - pytorch_sparse
 
 test:
   imports:
