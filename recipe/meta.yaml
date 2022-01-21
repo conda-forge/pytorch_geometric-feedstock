@@ -27,7 +27,7 @@ requirements:
     - numpy
     - pandas
     - pyparsing
-    - python >=3.6
+    - python 
     - python-louvain
     - requests
     - rdflib
