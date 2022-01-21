@@ -34,7 +34,7 @@ requirements:
     - scikit-learn
     - scipy
     - tqdm
-    - pytorch
+    - pytorch {{ pytorch_version }}
     - pytorch_sparse
 
 test:
