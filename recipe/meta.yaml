@@ -18,7 +18,7 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python
+    - python >=3.6
     - setuptools
   run:
     - googledrivedownloader
@@ -52,3 +52,4 @@ extra:
   recipe-maintainers:
     - bubblyorca
     - mxr-conda
+    - mikemhenry
