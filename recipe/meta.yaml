@@ -28,7 +28,6 @@ requirements:
     - pandas
     - pyparsing
     - python >=3.6
-    - python-louvain
     - requests
     - rdflib
     - scikit-learn
@@ -36,6 +35,7 @@ requirements:
     - tqdm
     - pytorch
     - pytorch_sparse
+    - omegaconf
 
 test:
   imports:
