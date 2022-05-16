@@ -1,5 +1,5 @@
 {% set name = "torch_geometric" %}
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 
 package:
   name: py{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 59c41993a0f6cc0e29efa6ca6274cc97bd6557e54bf7d3d38213933f821701c6
+  sha256: d64e4c7486fcf0c7fa82f0acbf5dd52035855469708bf89f8bc7fc607671c8b7
 
 build:
   number: 0
@@ -28,7 +28,6 @@ requirements:
     - pandas
     - pyparsing
     - python >=3.6
-    - python-louvain
     - requests
     - rdflib
     - scikit-learn
@@ -36,6 +35,7 @@ requirements:
     - tqdm
     - pytorch
     - pytorch_sparse
+    - omegaconf
 
 test:
   imports:
