@@ -43,7 +43,7 @@ requirements:
     - rdflib
     - trimesh
     - tabulate
-    - matplotlib
+    - matplotlib-base
     - scikit-image
     - torchmetrics >=0.7
     # - pytorch-memlab  # not yet on conda forge
