@@ -1,7 +1,7 @@
 About pytorch_geometric
 =======================
 
-Home: https://github.com/rusty1s/pytorch_geometric
+Home: https://github.com/pyg-team/pytorch_geometric
 
 Package license: MIT
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch_geometr
 
 Summary: Geometric Deep Learning Extension Library for PyTorch
 
-Development: https://github.com/rusty1s/pytorch_geometric
+Development: https://github.com/pyg-team/pytorch_geometric
 
 Current build status
 ====================
@@ -146,6 +146,7 @@ Feedstock Maintainers
 =====================
 
 * [@bubblyorca](https://github.com/bubblyorca/)
+* [@hadim](https://github.com/hadim/)
 * [@mikemhenry](https://github.com/mikemhenry/)
 * [@mxr-conda](https://github.com/mxr-conda/)
 
