@@ -16,26 +16,37 @@ build:
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - pytest-runner
-    - python >=3.6
     - setuptools
   run:
-    - googledrivedownloader
-    - jinja2
-    - networkx
-    - numpy
-    - pandas
-    - pyparsing
-    - python >=3.6
-    - requests
-    - rdflib
-    - scikit-learn
-    - scipy
-    - tqdm
+    - python >=3.7
+    - pyg_lib ==0.1.0
     - pytorch
-    - pytorch_sparse
-    - omegaconf
+
+    # Required deps
+    - tqdm
+    - numpy
+    - scipy
+    - jinja2
+    - requests
+    - pyparsing
+    - scikit-learn
+    - psutil >=5.8.0
+
+    # Full deps
+    - ase
+    - h5py
+    - numba
+    - sympy
+    - captum
+    - rdflib
+    - trimesh
+    - tabulate
+    - matplotlib
+    - scikit-image
+    - torchmetrics >=0.7
+    # - pytorch-memlab  # not yet on conda forge
 
 test:
   imports:
