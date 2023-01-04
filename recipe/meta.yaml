@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - pyg_lib ==0.1.0
+    - pyg-lib ==0.1.0
     - pytorch
 
     # Required deps
