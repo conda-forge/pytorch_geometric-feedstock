@@ -24,6 +24,8 @@ requirements:
     - pyg-lib ==0.1.0
     - pytorch
 
+    - pytorch_sparse
+
     # Required deps
     - tqdm
     - numpy
