@@ -21,9 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - pyg-lib ==0.1.0
     - pytorch
-    - pytorch_sparse
 
     # Required deps
     - tqdm
@@ -43,11 +41,15 @@ requirements:
     - captum
     - rdflib
     - trimesh
+    - networkx
+    - graphviz
     - tabulate
     - matplotlib-base
     - scikit-image
-    - torchmetrics >=0.7
     # - pytorch-memlab  # not yet on conda forge
+    # - pgmpy  # not yet on conda forge
+    - opt_einsum
+    - statsmodels
 
 test:
   imports:
