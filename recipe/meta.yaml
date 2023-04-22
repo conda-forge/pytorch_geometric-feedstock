@@ -1,5 +1,5 @@
 {% set name = "torch_geometric" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: py{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fdb282451fc33270e8e0b81d9aec7b70590363227dab0b1a7cb50a91d7b98e1d
+  sha256: 4b44965d1d1f12ec2656d896614c9e8de11c096c5ff0dc7661b54b498fa3f766
 
 build:
   number: 0
@@ -16,14 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >=3.8
     - pyg-lib ==0.1.0
     - pytorch
-    - pytorch_sparse
 
     # Required deps
     - tqdm
@@ -43,11 +42,15 @@ requirements:
     - captum
     - rdflib
     - trimesh
+    - networkx
+    - graphviz
     - tabulate
     - matplotlib-base
     - scikit-image
-    - torchmetrics >=0.7
     # - pytorch-memlab  # not yet on conda forge
+    # - pgmpy  # not yet on conda forge
+    - opt_einsum
+    - statsmodels
 
 test:
   imports:
