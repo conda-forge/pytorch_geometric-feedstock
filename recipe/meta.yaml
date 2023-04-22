@@ -10,7 +10,7 @@ source:
   sha256: 4b44965d1d1f12ec2656d896614c9e8de11c096c5ff0dc7661b54b498fa3f766
 
 build:
-  number: 0
+  number: 1000
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-    - pyg-lib ==0.1.0
+    - pyg-lib ==0.2.0
     - pytorch
 
     # Required deps
