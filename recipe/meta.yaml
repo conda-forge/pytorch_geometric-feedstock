@@ -19,9 +19,9 @@ requirements:
     - python >=3.8
     - pip
     - setuptools
+    - flit
   run:
     - python >=3.8
-    - pyg-lib ==0.2.0
     - pytorch
 
     # Required deps
@@ -39,13 +39,15 @@ requirements:
     - h5py
     - numba
     - sympy
+    - pandas
     - captum
     - rdflib
     - trimesh
     - networkx
     - graphviz
-    - tabulate
     - matplotlib-base
+    - pynndescent
+    - torchmetrics
     - scikit-image
     # - pytorch-memlab  # not yet on conda forge
     # - pgmpy  # not yet on conda forge
