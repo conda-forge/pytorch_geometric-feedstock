@@ -10,7 +10,7 @@ source:
   sha256: f4f4a57fd885c74e982d570df3a259ffff5adbb4ad7a3a95aabf5ace5fa7a240
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -53,6 +53,7 @@ requirements:
     # - pgmpy  # not yet on conda forge
     - opt_einsum
     - statsmodels
+    - aiohttp  # see https://github.com/conda-forge/pytorch_geometric-feedstock/pull/36#issuecomment-1956157792
 
 test:
   imports:
