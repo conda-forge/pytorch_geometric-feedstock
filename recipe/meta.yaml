@@ -68,6 +68,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - jan-janssen
     - bubblyorca
     - mxr-conda
     - mikemhenry
