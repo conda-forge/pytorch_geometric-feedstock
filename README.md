@@ -146,6 +146,7 @@ Feedstock Maintainers
 =====================
 
 * [@bubblyorca](https://github.com/bubblyorca/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@mikemhenry](https://github.com/mikemhenry/)
 * [@mxr-conda](https://github.com/mxr-conda/)
 
