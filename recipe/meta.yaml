@@ -10,7 +10,7 @@ source:
   sha256: ad0761650c8fa56cdc46ee61c564fd4995f07f079965fe732b3a76d109fd3edc
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -25,35 +25,38 @@ requirements:
     - pytorch
 
     # Required deps
-    - tqdm
-    - numpy
-    - scipy
+    - aiohttp
+    - fsspec
     - jinja2
-    - requests
-    - pyparsing
-    - scikit-learn
+    - numpy
     - psutil >=5.8.0
+    - pyparsing
+    - requests
+    - tqdm
 
     # Full deps
+    - scipy
+    - scikit-learn
     - ase
-    - h5py
-    - numba
-    - sympy
-    - pandas
     - captum
-    - rdflib
-    - trimesh
-    - networkx
     - graphviz
+    - h5py
     - matplotlib-base
-    - pynndescent
-    - torchmetrics
-    - scikit-image
-    # - pytorch-memlab  # not yet on conda forge
-    # - pgmpy  # not yet on conda forge
+    - networkx
+    - numba
     - opt_einsum
+    - pandas
+    - pgmpy
+    - pynndescent
+    # - pytorch-memlab  # not yet on conda forge
+    - rdflib
+    - rdkit
+    - scikit-image
     - statsmodels
-    - aiohttp  # see https://github.com/conda-forge/pytorch_geometric-feedstock/pull/36#issuecomment-1956157792
+    - sympy
+    - tabulate
+    - torchmetrics
+    - trimesh
 
 test:
   imports:
