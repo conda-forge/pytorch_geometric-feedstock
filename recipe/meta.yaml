@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 1f18f9d0fc4d2239d526221e4f22606a4a3895b5d965a9856d27610a3df662c6
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
     - flit
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pytorch
 
     # Required deps
@@ -59,6 +59,8 @@ requirements:
     - trimesh
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - torch_geometric
 
