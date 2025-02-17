@@ -7,7 +7,7 @@ Home: https://github.com/pyg-team/pytorch_geometric
 
 Package license: MIT
 
-Summary: Geometric Deep Learning Extension Library for PyTorch
+Summary: Graph Neural Network Library for PyTorch
 
 Development: https://github.com/pyg-team/pytorch_geometric
 
@@ -15,11 +15,44 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -29,6 +62,10 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg-green.svg)](https://anaconda.org/conda-forge/pyg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg.svg)](https://anaconda.org/conda-forge/pyg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg.svg)](https://anaconda.org/conda-forge/pyg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg.svg)](https://anaconda.org/conda-forge/pyg) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg--full-green.svg)](https://anaconda.org/conda-forge/pyg-full) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg-full.svg)](https://anaconda.org/conda-forge/pyg-full) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg-full.svg)](https://anaconda.org/conda-forge/pyg-full) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg-full.svg)](https://anaconda.org/conda-forge/pyg-full) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg--graphgym-green.svg)](https://anaconda.org/conda-forge/pyg-graphgym) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg-graphgym.svg)](https://anaconda.org/conda-forge/pyg-graphgym) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg-graphgym.svg)](https://anaconda.org/conda-forge/pyg-graphgym) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg-graphgym.svg)](https://anaconda.org/conda-forge/pyg-graphgym) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg--modelhub-green.svg)](https://anaconda.org/conda-forge/pyg-modelhub) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg-modelhub.svg)](https://anaconda.org/conda-forge/pyg-modelhub) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg-modelhub.svg)](https://anaconda.org/conda-forge/pyg-modelhub) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg-modelhub.svg)](https://anaconda.org/conda-forge/pyg-modelhub) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pytorch_geometric-green.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) |
 
 Installing pytorch_geometric
@@ -41,41 +78,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pytorch_geometric` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pyg, pyg-full, pyg-graphgym, pyg-modelhub, pytorch_geometric` can be installed with `conda`:
 
 ```
-conda install pytorch_geometric
-```
-
-or with `mamba`:
-
-```
-mamba install pytorch_geometric
-```
-
-It is possible to list all of the versions of `pytorch_geometric` available on your platform with `conda`:
-
-```
-conda search pytorch_geometric --channel conda-forge
+conda install pyg pyg-full pyg-graphgym pyg-modelhub pytorch_geometric
 ```
 
 or with `mamba`:
 
 ```
-mamba search pytorch_geometric --channel conda-forge
+mamba install pyg pyg-full pyg-graphgym pyg-modelhub pytorch_geometric
+```
+
+It is possible to list all of the versions of `pyg` available on your platform with `conda`:
+
+```
+conda search pyg --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search pyg --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search pytorch_geometric --channel conda-forge
+mamba repoquery search pyg --channel conda-forge
 
-# List packages depending on `pytorch_geometric`:
-mamba repoquery whoneeds pytorch_geometric --channel conda-forge
+# List packages depending on `pyg`:
+mamba repoquery whoneeds pyg --channel conda-forge
 
-# List dependencies of `pytorch_geometric`:
-mamba repoquery depends pytorch_geometric --channel conda-forge
+# List dependencies of `pyg`:
+mamba repoquery depends pyg --channel conda-forge
 ```
 
 
