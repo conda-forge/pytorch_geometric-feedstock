@@ -59,9 +59,12 @@ outputs:
   - name: pyg-graphgym
     # Parity with "torch_geometry[graphgym]" pypi package
     build:
-      noarch: generic
+      noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg', exact=True) }}
         - protobuf <4.21
         - pytorch-lightning <2.3.0
@@ -70,9 +73,12 @@ outputs:
   - name: pyg-modelhub
     # Parity with "torch_geometry[modelhub]"
     build:
-      noarch: generic
+      noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg', exact=True) }}
         - huggingface_hub
     test:
@@ -82,9 +88,12 @@ outputs:
   - name: pyg-full
     # Parity with "torch_geometry[full]" pypi package
     build:
-      noarch: generic
+      noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg-graphgym', exact=True) }}
         - {{ pin_subpackage('pyg-modelhub', exact=True) }}
         - scipy
@@ -113,9 +122,12 @@ outputs:
   - name: pytorch_geometric
     # Synonym for pyg-full sub-package
     build:
-      noarch: generic
+      noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg-full', exact=True) }}
 
 about:
