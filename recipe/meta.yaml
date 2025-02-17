@@ -68,8 +68,8 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('pyg', exact=True) }}
-        - protobuf <4.21
-        - pytorch-lightning <2.3.0
+        - protobuf #<4.21
+        - pytorch-lightning #<2.3.0
         - yacs
 
     test:
@@ -130,12 +130,12 @@ outputs:
         - scipy
         - scikit-learn
         - ase
-        - captum <0.7.0
+        - captum #<0.7.0
         - graphviz
         - h5py
         - matplotlib-base
         - networkx
-        - numba <0.60.0
+        - numba #<0.60.0
         - opt_einsum
         - pandas
         - pgmpy
