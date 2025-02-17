@@ -29,6 +29,7 @@ test:
     - torch_geometric.transforms
   requires:
     - python {{ python_min }}
+    - pytorch-cpu
     - pip
   commands:
     - pip check
