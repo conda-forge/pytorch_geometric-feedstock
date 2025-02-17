@@ -74,7 +74,7 @@ outputs:
         - huggingface_hub
     test:
       imports:
-        - torch_geometric.???
+        - torch_geometric.nn.model_hub
 
   - name: pyg-full
     # Parity with "torch_geometry[full]" pypi package
