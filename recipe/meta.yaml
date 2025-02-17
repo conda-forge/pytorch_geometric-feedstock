@@ -1,4 +1,5 @@
 {% set version = "2.6.1" %}
+{% set python_min = "3.8" %}
 
 package:
   name: pytorch_geometric
@@ -11,6 +12,26 @@ source:
 build:
   number: 2
   noarch: python
+
+requirements:
+  host:
+    - python {{ python_min }}
+  run:
+    - python >={{ python_min }}
+
+test:
+  imports:
+    - torch_geometric
+    - torch_geometric.nn
+    - torch_geometric.data
+    - torch_geometric.utils
+    - torch_geometric.datasets
+    - torch_geometric.transforms
+  requires:
+    - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
 
 outputs:
   - name: pyg
@@ -35,41 +56,25 @@ outputs:
         - requests
         - tqdm
 
-    test:
-      imports:
-        - torch_geometric
-        - torch_geometric.nn
-        - torch_geometric.data
-        - torch_geometric.utils
-        - torch_geometric.datasets
-        - torch_geometric.transforms
-      commands:
-        - pip check
-      requires:
-        - pip
-
   - name: pyg-graphgym
     # Parity with "torch_geometry[graphgym]" pypi package
     requirements:
       host:
-        - python
+        - python {{ python_min }}
       run:
-        - python
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg', max_pin="x.x.x") }}
         - protobuf <4.21
         - pytorch-lightning <2.3.0
         - yacs
-    test:
-      imports:
-        - torch_geometric.graphgym
 
   - name: pyg-modelhub
     # Parity with "torch_geometry[modelhub]"
     requirements:
       host:
-        - python
+        - python {{ python_min }}
       run:
-        - python
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg', max_pin="x.x.x") }}
         - huggingface_hub
     test:
@@ -80,9 +85,9 @@ outputs:
     # Parity with "torch_geometry[full]" pypi package
     requirements:
       host:
-        - python
+        - python {{ python_min }}
       run:
-        - python
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg-graphgym', max_pin="x.x.x") }}
         - {{ pin_subpackage('pyg-modelhub', max_pin="x.x.x") }}
         - scipy
@@ -107,21 +112,15 @@ outputs:
         - tabulate
         - torchmetrics
         - trimesh
-    test:
-      imports:
-        - torch_geometric
 
   - name: pytorch_geometric
     # Synonym for pyg-full sub-package
     requirements:
       host:
-        - python
+        - python {{ python_min }}
       run:
-        - python
+        - python >={{ python_min }}
         - {{ pin_subpackage('pyg-full', max_pin="x.x.x") }}
-    test:
-      imports:
-        - torch_geometric
 
 about:
   home: https://github.com/pyg-team/pytorch_geometric
