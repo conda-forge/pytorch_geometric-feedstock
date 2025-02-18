@@ -53,7 +53,7 @@ outputs:
         - torch_geometric.transforms
       requires:
         - python {{ python_min }}
-        - pytorch-cpu >=2.5.1
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
         - pip
       commands:
         - pip check
@@ -83,7 +83,7 @@ outputs:
         - torch_geometric.graphgym
       requires:
         - python {{ python_min }}
-        - pytorch-cpu >=2.5.1
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
         - pip
       commands:
         - pip check
@@ -111,7 +111,7 @@ outputs:
         - torch_geometric.nn.model_hub
       requires:
         - python {{ python_min }}
-        - pytorch-cpu >=2.5.1
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
         - pip
       commands:
         - pip check
@@ -138,7 +138,7 @@ outputs:
         - numba #<0.60.0
         - opt_einsum
         - pandas
-        - pgmpy
+        - pgmpy # [not win]
         - pynndescent
         # - pytorch-memlab  # not yet on conda forge
         - rdflib
@@ -160,7 +160,7 @@ outputs:
         - torch_geometric.transforms
       requires:
         - python {{ python_min }}
-        - pytorch-cpu >=2.5.1
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
         - pip
       commands:
         - pip check
@@ -188,7 +188,7 @@ outputs:
         - torch_geometric.graphgym
       requires:
         - python {{ python_min }}
-        - pytorch-cpu >=2.5.1
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
         - pip
       commands:
         - pip check
