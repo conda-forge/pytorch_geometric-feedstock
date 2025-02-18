@@ -138,7 +138,7 @@ outputs:
         - numba #<0.60.0
         - opt_einsum
         - pandas
-        - pgmpy # [not win]
+        # - pgmpy  # no windows package
         - pynndescent
         # - pytorch-memlab  # not yet on conda forge
         - rdflib
