@@ -20,7 +20,7 @@ requirements:
     - python >={{ python_min }}
 
 outputs:
-  - name: pyg
+  - name: pytorch_geometric
     # Parity with "torch_geometry" pypi package
     # Parity with "pyg::pyg" and "pyg::pytorch-geometric" conda packages
     build:
@@ -58,7 +58,7 @@ outputs:
       commands:
         - pip check
 
-  - name: pyg-graphgym
+  - name: pytorch_geometric-graphgym
     # Parity with "torch_geometry[graphgym]" pypi package
     build:
       noarch: python
@@ -88,7 +88,7 @@ outputs:
       commands:
         - pip check
 
-  - name: pyg-modelhub
+  - name: pytorch_geometric-modelhub
     # Parity with "torch_geometry[modelhub]"
     build:
       noarch: python
@@ -109,83 +109,6 @@ outputs:
         - torch_geometric.datasets
         - torch_geometric.transforms
         - torch_geometric.nn.model_hub
-      requires:
-        - python {{ python_min }}
-        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
-        - pip
-      commands:
-        - pip check
-
-  - name: pyg-full
-    # Parity with "torch_geometry[full]" pypi package
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python {{ python_min }}
-      run:
-        - python >={{ python_min }}
-        - {{ pin_subpackage('pyg-graphgym', exact=True) }}
-        - {{ pin_subpackage('pyg-modelhub', exact=True) }}
-        - scipy
-        - scikit-learn
-        - ase
-        - captum #<0.7.0
-        - graphviz
-        - h5py
-        - matplotlib-base
-        - networkx
-        - numba #<0.60.0
-        - opt_einsum
-        - pandas
-        # - pgmpy  # no windows package
-        - pynndescent
-        # - pytorch-memlab  # not yet on conda forge
-        - rdflib
-        - rdkit
-        - scikit-image
-        - statsmodels
-        - sympy
-        - tabulate
-        - torchmetrics
-        - trimesh
-
-    test:
-      imports:
-        - torch_geometric
-        - torch_geometric.nn
-        - torch_geometric.data
-        - torch_geometric.utils
-        - torch_geometric.datasets
-        - torch_geometric.transforms
-      requires:
-        - python {{ python_min }}
-        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
-        - pip
-      commands:
-        - pip check
-
-  - name: pytorch_geometric
-    # Synonym for pyg-full sub-package
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python {{ python_min }}
-      run:
-        - python >={{ python_min }}
-        - {{ pin_subpackage('pyg-full', exact=True) }}
-
-    test:
-      imports:
-        - torch_geometric
-        - torch_geometric.nn
-        - torch_geometric.data
-        - torch_geometric.utils
-        - torch_geometric.datasets
-        - torch_geometric.transforms
-        - torch_geometric.nn.model_hub
-        - torch_geometric.graphgym
       requires:
         - python {{ python_min }}
         - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
