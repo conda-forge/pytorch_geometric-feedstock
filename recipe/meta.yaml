@@ -67,7 +67,7 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
-        - {{ pin_subpackage('pyg', exact=True) }}
+        - {{ pin_subpackage('pytorch_geometric', exact=True) }}
         - protobuf #<4.21
         - pytorch-lightning #<2.3.0
         - yacs
@@ -97,7 +97,7 @@ outputs:
         - python {{ python_min }}
       run:
         - python >={{ python_min }}
-        - {{ pin_subpackage('pyg', exact=True) }}
+        - {{ pin_subpackage('pytorch_geometric', exact=True) }}
         - huggingface_hub
 
     test:
