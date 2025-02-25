@@ -1,72 +1,124 @@
-{% set name = "torch_geometric" %}
 {% set version = "2.6.1" %}
+{% set python_min = "3.9" %}
 
 package:
-  name: py{{ name|lower }}
+  name: pytorch_geometric
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/torch_geometric/torch_geometric-{{ version }}.tar.gz
   sha256: 1f18f9d0fc4d2239d526221e4f22606a4a3895b5d965a9856d27610a3df662c6
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
   noarch: python
 
 requirements:
   host:
     - python {{ python_min }}
-    - pip
-    - setuptools
-    - flit
   run:
     - python >={{ python_min }}
-    - pytorch
 
-    # Required deps
-    - aiohttp
-    - fsspec
-    - jinja2
-    - numpy
-    - psutil >=5.8.0
-    - pyparsing
-    - requests
-    - tqdm
+outputs:
+  - name: pytorch_geometric
+    # Parity with "torch_geometry" pypi package
+    # Parity with "pyg::pyg" and "pyg::pytorch-geometric" conda packages
+    build:
+      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+      noarch: python
 
-    # Full deps
-    - scipy
-    - scikit-learn
-    - ase
-    - captum
-    - graphviz
-    - h5py
-    - matplotlib-base
-    - networkx
-    - numba
-    - opt_einsum
-    - pandas
-    - pgmpy
-    - pynndescent
-    # - pytorch-memlab  # not yet on conda forge
-    - rdflib
-    - rdkit
-    - scikit-image
-    - statsmodels
-    - sympy
-    - tabulate
-    - torchmetrics
-    - trimesh
+    requirements:
+      host:
+        - python {{ python_min }}
+        - flit-core >=3.2,<4
+        - pip
+      run:
+        - python >={{ python_min }}
+        - aiohttp
+        - fsspec
+        - jinja2
+        - numpy
+        - psutil >=5.8.0
+        - pyparsing
+        - requests
+        - tqdm
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - torch_geometric
+    test:
+      imports:
+        - torch_geometric
+        - torch_geometric.nn
+        - torch_geometric.data
+        - torch_geometric.utils
+        - torch_geometric.datasets
+        - torch_geometric.transforms
+      requires:
+        - python {{ python_min }}
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
+        - pip
+      commands:
+        - pip check
+
+  - name: pytorch_geometric-graphgym
+    # Parity with "torch_geometry[graphgym]" pypi package
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage('pytorch_geometric', exact=True) }}
+        - protobuf #<4.21
+        - pytorch-lightning #<2.3.0
+        - yacs
+
+    test:
+      imports:
+        - torch_geometric
+        - torch_geometric.nn
+        - torch_geometric.data
+        - torch_geometric.utils
+        - torch_geometric.datasets
+        - torch_geometric.transforms
+        - torch_geometric.graphgym
+      requires:
+        - python {{ python_min }}
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
+        - pip
+      commands:
+        - pip check
+
+  - name: pytorch_geometric-modelhub
+    # Parity with "torch_geometry[modelhub]"
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+      run:
+        - python >={{ python_min }}
+        - {{ pin_subpackage('pytorch_geometric', exact=True) }}
+        - huggingface_hub
+
+    test:
+      imports:
+        - torch_geometric
+        - torch_geometric.nn
+        - torch_geometric.data
+        - torch_geometric.utils
+        - torch_geometric.datasets
+        - torch_geometric.transforms
+        - torch_geometric.nn.model_hub
+      requires:
+        - python {{ python_min }}
+        - pytorch-cpu >=2.5.1  # first conda-forge version for all platforms
+        - pip
+      commands:
+        - pip check
 
 about:
   home: https://github.com/pyg-team/pytorch_geometric
-  summary: Geometric Deep Learning Extension Library for PyTorch
+  summary: Graph Neural Network Library for PyTorch
   license: MIT
   license_file: LICENSE
   dev_url: https://github.com/pyg-team/pytorch_geometric
@@ -77,3 +129,4 @@ extra:
     - bubblyorca
     - mxr-conda
     - mikemhenry
+    - jamesmyatt
