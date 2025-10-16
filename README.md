@@ -15,44 +15,11 @@ Current build status
 ====================
 
 
-<table>
-    
-  <tr>
-    <td>Azure</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10113&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch_geometric-feedstock?branchName=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -62,11 +29,9 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg-green.svg)](https://anaconda.org/conda-forge/pyg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg.svg)](https://anaconda.org/conda-forge/pyg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg.svg)](https://anaconda.org/conda-forge/pyg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg.svg)](https://anaconda.org/conda-forge/pyg) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg--full-green.svg)](https://anaconda.org/conda-forge/pyg-full) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg-full.svg)](https://anaconda.org/conda-forge/pyg-full) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg-full.svg)](https://anaconda.org/conda-forge/pyg-full) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg-full.svg)](https://anaconda.org/conda-forge/pyg-full) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg--graphgym-green.svg)](https://anaconda.org/conda-forge/pyg-graphgym) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg-graphgym.svg)](https://anaconda.org/conda-forge/pyg-graphgym) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg-graphgym.svg)](https://anaconda.org/conda-forge/pyg-graphgym) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg-graphgym.svg)](https://anaconda.org/conda-forge/pyg-graphgym) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyg--modelhub-green.svg)](https://anaconda.org/conda-forge/pyg-modelhub) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyg-modelhub.svg)](https://anaconda.org/conda-forge/pyg-modelhub) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyg-modelhub.svg)](https://anaconda.org/conda-forge/pyg-modelhub) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyg-modelhub.svg)](https://anaconda.org/conda-forge/pyg-modelhub) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pytorch_geometric-green.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytorch__geometric-green.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytorch_geometric.svg)](https://anaconda.org/conda-forge/pytorch_geometric) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytorch__geometric--graphgym-green.svg)](https://anaconda.org/conda-forge/pytorch_geometric-graphgym) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytorch_geometric-graphgym.svg)](https://anaconda.org/conda-forge/pytorch_geometric-graphgym) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytorch_geometric-graphgym.svg)](https://anaconda.org/conda-forge/pytorch_geometric-graphgym) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytorch_geometric-graphgym.svg)](https://anaconda.org/conda-forge/pytorch_geometric-graphgym) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytorch__geometric--modelhub-green.svg)](https://anaconda.org/conda-forge/pytorch_geometric-modelhub) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytorch_geometric-modelhub.svg)](https://anaconda.org/conda-forge/pytorch_geometric-modelhub) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytorch_geometric-modelhub.svg)](https://anaconda.org/conda-forge/pytorch_geometric-modelhub) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytorch_geometric-modelhub.svg)](https://anaconda.org/conda-forge/pytorch_geometric-modelhub) |
 
 Installing pytorch_geometric
 ============================
@@ -78,41 +43,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyg, pyg-full, pyg-graphgym, pyg-modelhub, pytorch_geometric` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pytorch_geometric, pytorch_geometric-graphgym, pytorch_geometric-modelhub` can be installed with `conda`:
 
 ```
-conda install pyg pyg-full pyg-graphgym pyg-modelhub pytorch_geometric
-```
-
-or with `mamba`:
-
-```
-mamba install pyg pyg-full pyg-graphgym pyg-modelhub pytorch_geometric
-```
-
-It is possible to list all of the versions of `pyg` available on your platform with `conda`:
-
-```
-conda search pyg --channel conda-forge
+conda install pytorch_geometric pytorch_geometric-graphgym pytorch_geometric-modelhub
 ```
 
 or with `mamba`:
 
 ```
-mamba search pyg --channel conda-forge
+mamba install pytorch_geometric pytorch_geometric-graphgym pytorch_geometric-modelhub
+```
+
+It is possible to list all of the versions of `pytorch_geometric` available on your platform with `conda`:
+
+```
+conda search pytorch_geometric --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search pytorch_geometric --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search pyg --channel conda-forge
+mamba repoquery search pytorch_geometric --channel conda-forge
 
-# List packages depending on `pyg`:
-mamba repoquery whoneeds pyg --channel conda-forge
+# List packages depending on `pytorch_geometric`:
+mamba repoquery whoneeds pytorch_geometric --channel conda-forge
 
-# List dependencies of `pyg`:
-mamba repoquery depends pyg --channel conda-forge
+# List dependencies of `pytorch_geometric`:
+mamba repoquery depends pytorch_geometric --channel conda-forge
 ```
 
 
@@ -137,12 +102,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -169,7 +134,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/pytorch_geometric-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
@@ -183,6 +148,7 @@ Feedstock Maintainers
 =====================
 
 * [@bubblyorca](https://github.com/bubblyorca/)
+* [@jamesmyatt](https://github.com/jamesmyatt/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@mikemhenry](https://github.com/mikemhenry/)
 * [@mxr-conda](https://github.com/mxr-conda/)
