@@ -41,6 +41,7 @@ outputs:
         - pyparsing
         - requests
         - tqdm
+        - xxhash
 
     test:
       imports:
