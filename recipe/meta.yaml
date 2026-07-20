@@ -125,6 +125,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - jameslamb
     - jan-janssen
     - bubblyorca
     - mxr-conda
