@@ -1,12 +1,12 @@
-{% set version = "2.7.0" %}
+{% set version = "2.8.0.post1" %}
 
 package:
   name: pytorch_geometric
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/t/torch_geometric/torch_geometric-{{ version }}.tar.gz
-  sha256: f9099e4aece1a9f618c84dbaac33a77f43139736698c7e8bddf3301ef1f2e8d4
+  url: https://pypi.org/packages/source/t/torch-geometric/torch_geometric-{{ version }}.tar.gz
+  sha256: 2c0c81666ec10f2132f6b4e0b6c57fc813f2c9f6b57599d7b7a799c614c22fbd
 
 build:
   number: 0
