@@ -7,4 +7,4 @@ docker_image:
 numpy:
 - '2'
 python_min:
-- '3.10'
+- '3.11'
